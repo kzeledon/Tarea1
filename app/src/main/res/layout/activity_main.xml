@@ -6,13 +6,68 @@
     android:layout_height="match_parent"
     tools:context="com.example.karizp.tarea1.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RadioButton
+            android:id="@+id/RadioBtnDolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtFieldNumber"
+            android:layout_below="@+id/RadioBtnColones"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dolar"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="30dp" />
+
+        <RadioButton
+            android:id="@+id/RadioBtnColones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/RadioBtnDolar"
+            android:layout_marginTop="62dp"
+            android:fontFamily="@font/roboto"
+            android:text="Colones"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="71dp" />
+
+        <EditText
+            android:id="@+id/txtFieldNumber"
+            android:layout_width="303dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/btnConvertir"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="79dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Escriba el numero"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            android:textColorLink="@color/colorPrimary"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="139dp" />
+
+        <Button
+            android:id="@+id/btnConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtFieldNumber"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="152dp"
+            android:fontFamily="@font/roboto"
+            android:text="Convertir"
+            tools:layout_editor_absoluteX="254dp"
+            tools:layout_editor_absoluteY="207dp" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
