@@ -9,36 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="57dp"
         tools:layout_editor_absoluteY="0dp">
-
-        <RadioButton
-            android:id="@+id/RadioBtnDolar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/txtFieldNumber"
-            android:layout_below="@+id/RadioBtnColones"
-            android:layout_marginTop="23dp"
-            android:fontFamily="@font/roboto"
-            android:text="Dolar"
-            android:textColorLink="@color/colorPrimary"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="41dp"
-            tools:layout_editor_absoluteY="30dp" />
-
-        <RadioButton
-            android:id="@+id/RadioBtnColones"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/RadioBtnDolar"
-            android:layout_marginTop="62dp"
-            android:fontFamily="@font/roboto"
-            android:text="Colones"
-            android:textColorLink="@color/colorPrimary"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="41dp"
-            tools:layout_editor_absoluteY="71dp" />
 
         <EditText
             android:id="@+id/txtFieldNumber"
@@ -65,9 +37,76 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="152dp"
             android:fontFamily="@font/roboto"
+            android:onClick="onButtonClick"
             android:text="Convertir"
             tools:layout_editor_absoluteX="254dp"
             tools:layout_editor_absoluteY="207dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/radioGroup2"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/roboto"
+            android:text="Escoge una moneda"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignStart="@id/txtFieldNumber"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="70dp"
+            android:baselineAligned="false"
+            android:id="@+id/radioGroup2">
+
+            <RadioButton
+                android:id="@+id/RadioBtnColones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/RadioBtnDolar"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:onClick="onRadioButtonClicked"
+                android:text="Colon"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="71dp" />
+
+            <RadioButton
+                android:id="@+id/RadioBtnDolar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtFieldNumber"
+                android:layout_below="@+id/RadioBtnColones"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:onClick="onRadioButtonClicked"
+                android:text="Dolar"
+                android:textColor="@android:color/background_dark"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="30dp" />
+
+        </RadioGroup>
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
